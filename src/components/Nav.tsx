@@ -82,28 +82,21 @@ const Nav = () => {
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
                     <LinkButton
                         title="GitHub"
-                        href={"https://github.com/cnrad"}
+                        href={"https://github.com/Trixzyy"}
                         icon={
                             <SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
                         }
                     />
                     <LinkButton
                         title="Twitter"
-                        href={"https://twitter.com/notcnrad"}
+                        href={"https://twitter.com/trixzydev"}
                         icon={
                             <SiTwitter className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
                         }
                     />
                     <LinkButton
-                        title="LinkedIn"
-                        href={"https://linkedin.com/in/cnrad"}
-                        icon={
-                            <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
-                        }
-                    />
-                    <LinkButton
                         title="Email"
-                        href={"mailto:hello@cnrad.dev"}
+                        href={"mailto:hi@tigerlake.xyz"}
                         icon={
                             <FiMail className="w-6 h-6 cursor-pointer hover:stroke-white stroke-gray-400 transition-colors" />
                         }
@@ -160,19 +153,15 @@ const Nav = () => {
 
                             <div className="flex flex-row items-center justify-center gap-6 py-4">
                                 <LinkButton
-                                    href={"https://github.com/cnrad"}
+                                    href={"https://github.com/Trixzyy"}
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"https://twitter.com/notcnrad"}
+                                    href={"https://twitter.com/trixzydev"}
                                     icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"https://linkedin.com/in/cnrad"}
-                                    icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
-                                />
-                                <LinkButton
-                                    href={"mailto:hello@cnrad.dev"}
+                                    href={"mailto:hi@tigerlake.xyz"}
                                     icon={<FiMail className="w-6 h-6 cursor-pointer" />}
                                 />
                             </div>

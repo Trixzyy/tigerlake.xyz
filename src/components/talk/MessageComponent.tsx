@@ -17,7 +17,7 @@ const MessageComponent = () => {
 
     const sendMessage = async () => {
         if (email.current == "" || message.current == "") return setErrMsg("Please fill out all fields!");
-        if (!emailRegex.test(email.current)) return setErrMsg("Hmm, that doesn't look like an email.");
+        if (!emailRegex.test(email.current)) return setErrMsg("Pretty sure thats not an email...");
 
         setSending(true);
 
@@ -27,7 +27,7 @@ const MessageComponent = () => {
         });
 
         if (response.data.result === "FIELD_EMPTY") return setErrMsg("Please fill out all fields!");
-        if (response.data.result === "DISCORD_API_ERROR") return setErrMsg("Something went wrong...");
+        if (response.data.result === "DISCORD_API_ERROR") return setErrMsg("Something went wrong... 😓");
 
         setSending(false);
 
@@ -58,7 +58,7 @@ const MessageComponent = () => {
                     >
                         <h1 className="font-bold text-sm dark:text-slate-500 mb-1">EMAIL</h1>
                         <input
-                            placeholder="example@gmail.com"
+                            placeholder="trixzy@tigerlake.xyz"
                             type="text"
                             onChange={(e: any) => (email.current = e.target.value)}
                             className="w-full p-2 mb-4 rounded-md bg-slate-300/50 dark:bg-slate-200/5 text-sm placeholder:text-gray-600 dark:placeholder:text-slate-200/20"
@@ -66,7 +66,7 @@ const MessageComponent = () => {
 
                         <h1 className="font-bold text-sm dark:text-slate-500 mb-1">MESSAGE</h1>
                         <textarea
-                            placeholder="Hi Conrad, what's up?"
+                            placeholder="Hey Trixzy, how's it going?"
                             onChange={(e: any) => (message.current = e.target.value)}
                             className="w-full min-h-[9rem] p-2 h-36 mb-4 rounded-md bg-slate-300/50 dark:bg-slate-200/5 text-sm placeholder:text-gray-600 dark:placeholder:text-slate-200/20"
                         />

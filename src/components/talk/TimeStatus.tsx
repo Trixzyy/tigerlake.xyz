@@ -1,19 +1,29 @@
 import { useEffect, useState } from "react";
 
 const TimeStatus = () => {
-    const [time, setTime] = useState<string>("00:00:00 p.m.");
+    const [time, setTime] = useState<string>(getCurrentTime());
     const [awake, setAwake] = useState<boolean>(true);
 
-    function updateTime() {
-        let current = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
-        setTime(`${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`);
-        setTimeout(updateTime, 60 * 1000);
-
-        if (new Date().getHours() < 7) setAwake(false);
+    function getCurrentTime() {
+        const current = new Date().toLocaleString("en-US", { timeZone: "Europe/London" });
+        return `${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`;
     }
 
     useEffect(() => {
-        updateTime();
+        const updateInterval = setInterval(() => {
+            const currentTime = getCurrentTime();
+            setTime(currentTime);
+
+            if (new Date().getHours() < 7) {
+                setAwake(false);
+            } else {
+                setAwake(true);
+            }
+        }, 1000); // Update every second
+
+        return () => {
+            clearInterval(updateInterval); // Clean up the interval on component unmount
+        };
     }, []);
 
     return (
