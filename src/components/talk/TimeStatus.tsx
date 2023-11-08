@@ -1,39 +1,39 @@
 import { useEffect, useState } from "react";
+import { DateTime } from "luxon";
 
 const TimeStatus = () => {
-    const [time, setTime] = useState<string>(getCurrentTime());
-    const [awake, setAwake] = useState<boolean>(true);
+  const [time, setTime] = useState<string>(getCurrentTime());
+  const [awake, setAwake] = useState<boolean>(isAwake());
 
-    function getCurrentTime() {
-        const current = new Date().toLocaleString("en-US", { timeZone: "Europe/London" });
-        return `${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`;
-    }
+  function getCurrentTime() {
+    const current = DateTime.now().setZone("Europe/London");
+    return current.toFormat("HH:mm");
+  }
 
-    useEffect(() => {
-        const updateInterval = setInterval(() => {
-            const currentTime = getCurrentTime();
-            setTime(currentTime);
+  function isAwake() {
+    const currentHour = DateTime.now().setZone("Europe/London").hour;
+    return currentHour >= 7 && currentHour <= 23;
+  }
 
-            if (new Date().getHours() < 7) {
-                setAwake(false);
-            } else {
-                setAwake(true);
-            }
-        }, 1000); // Update every second
+  useEffect(() => {
+    const updateInterval = setInterval(() => {
+      const currentTime = getCurrentTime();
+      const isAwakeNow = isAwake();
+      setTime(currentTime);
+      setAwake(isAwakeNow);
+    }, 1000);
 
-        return () => {
-            clearInterval(updateInterval); // Clean up the interval on component unmount
-        };
-    }, []);
+    return () => {
+      clearInterval(updateInterval);
+    };
+  }, []);
 
-    return (
-        <p className="text-black/50 dark:text-white/50 text-sm mb-10">
-            It's currently <span className="font-semibold text-black/60 dark:text-white/60">{time}</span> for me, so I'm
-            probably{" "}
-            <span className="font-semibold text-black/60 dark:text-white/60">{awake ? "awake" : "sleeping"}</span>. I'll
-            get back to you soon.
-        </p>
-    );
+  return (
+    <p className="text-black/50 dark:text-white/50 text-sm mb-10">
+      It's currently <span className="font-semibold text-black/60 dark:text-white/60">{time}</span> for me, so I'm probably{" "}
+      <span className="font-semibold text-black/60 dark:text-white/60">{awake ? "awake" : "asleep"}</span>. I'll get back to you soon.
+    </p>
+  );
 };
 
 export default TimeStatus;
