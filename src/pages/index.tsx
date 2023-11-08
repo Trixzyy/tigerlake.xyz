@@ -42,8 +42,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
            <Bio></Bio>
       
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mt-14 mb-12">
-                I’m a passionate software engineer from the UK who loves problem-solving and learning new things.
-                I’m always excited to work on projects that challenge me and help me grow. 
+            Hello, I'm Trixzy, a dedicated full-stack web developer based in the UK. I'm passionate about software engineering and thrive on solving complex problems. Welcome to my corner of the web!
             </p>
 
             <h2 className="font-medium text-3xl mb-4">What I Do 💭</h2>
