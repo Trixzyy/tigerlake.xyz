@@ -20,7 +20,7 @@ interface RepoProps {
 const RepoItem = ({ name, description, stars, forks, language }: RepoProps) => {
     // Check if description is null or undefined, and handle accordingly
     const truncatedDescription =
-        description && description.length > 150 ? description.slice(0, 147) + "..." : description;
+        description && description.length > 142 ? description.slice(0, 139) + "..." : description;
 
     // Check if the language is known, and if not, set it to "Other"
     const displayLanguage = Languages[language] ? language : "Other";

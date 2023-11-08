@@ -12,6 +12,9 @@ const Bio = () => {
     let statusColor = "stone"; // Default color
     let statusName = "Unknown"; // Default status name
 
+    // Weird way to use dynamic colors with tailwind because tailwind is funky
+    let colours = "bg-green-500 bg-red-500 bg-yellow-500 bg-stone-500"
+
     if (user) {
         // Temp, testing
         statusColor = "red";
@@ -52,18 +55,18 @@ const Bio = () => {
                     alt="Trixzy's Avatar"
                 />
                 <div className="w-156 h-full flex flex-col items-start ">
-                    <h1 className="font-bold text-3xl">Hey, I'm {user.discord_user.username}</h1>
+                    <h1 className="font-bold text-2xl md:text-3xl">Hey, I'm {user.discord_user.username}</h1>
                     <div className="flex items-center mt-2">
                         <span className="ml-2 w-2 h-2"></span>
-                        <span className={"absolute w-2 h-2 rounded-full" + ` bg-${statusColor}-600`} />
+                        <span className={"absolute w-2 h-2 rounded-full" + ` bg-${statusColor}-500`} />
                         <h1 className="text-black dark:text-gray-300 text-base flex">
                             {statusName}
                         </h1>
                     </div>
                     <div className="flex items-center mt-4">
                         
-                        <h1 className="text-black dark:text-gray-100 text-base flex">
-                            A full stack web devloper
+                        <h1 className="text-black dark:text-gray-100 text-sm md:text-base flex ">
+                            A full stack web developer
                         </h1>
                     </div>
                 </div>

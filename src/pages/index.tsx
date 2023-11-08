@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
 import {
+    SiCloudflare,
     SiVisualstudiocode,
-    SiRust,
     SiGit,
+    SiGnubash,
     SiDocker,
     SiNextdotjs as SiNextJs,
     SiNodedotjs as SiNodeJs,
-    SiPostgresql,
     SiReact,
-    SiRedis,
+    SiMongodb,
     SiStyledcomponents as SiStyledComponents,
     SiTailwindcss as SiTailwindCSS,
     SiTypescript,
-    SiYarn,
-    SiSwift,
     SiJavascript,
     SiPython,
-    SiPrisma,
+    SiFigma,
+    SiNginx,
+    SiRaspberrypi,
 } from "react-icons/si";
+
 import { TechItem } from "../components/TechItem";
 import RepoItem from "../components/RepoItem";
 import Bio from "../components/Bio"
@@ -36,45 +37,46 @@ const Index = ({ stats, topRepos }: AppProps) => {
             transition={{ ease: "easeOut", duration: 0.15 }}
             className="mt-24 w-full mb-32"
         >
-            <Bio></Bio>
-            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-                I'm a self-taught software engineer from the United States. I'm currently pursuing full-stack web
-                development to create stunning user experiences on the front-end, and scalable and secure infrastructure
-                on the backend.
+
+           
+           <Bio></Bio>
+      
+            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mt-14 mb-12">
+                I’m a passionate software engineer from the UK who loves problem-solving and learning new things.
+                I’m always excited to work on projects that challenge me and help me grow. 
             </p>
 
             <h2 className="font-medium text-3xl mb-4">What I Do 💭</h2>
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-12">
-                I'm passionate about everything in technology; from designing and developing software, to understanding
+                My specialty is JavaScript, I started with discord bots and moved on to even more. 
+                I want to know how it all works; from designing and developing software, to understanding
                 how the many moving parts of the internet work together, to cybersecurity, programming, and so much
-                more. I strive to learn more about these things every day, and utilize my knowledge to further
-                understand <i>how</i> or <i>why</i> the technology around us works.
+                more. The tech space is an ever evolving playing field, you learn something new everyday, 
+                which means its my job to understand <i>how</i> or <i>why</i> the technology around us works.
             </p>
 
             <h2 className="font-medium text-3xl mb-4">Technologies 💻</h2>
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6">
                 I use a variety of tools to streamline my development process and increase the quality of both my code,
-                and my projects. Below is a list of technologies and languages I've had experience with in the past, or
-                use currently.
+                and my projects. Below is a list of technologies and languages I have experience with. 
             </p>
             <div className="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10 mb-12">
-                <TechItem icon={SiTypescript} name="TypeScript" />
-                <TechItem icon={SiVisualstudiocode} name="VSCode" />
-                <TechItem icon={SiReact} name="React.js" />
+                <TechItem icon={SiVisualstudiocode} name="VSCode - My IDE of choice" />
                 <TechItem icon={SiNodeJs} name="Node.js" />
                 <TechItem icon={SiJavascript} name="JavaScript" />
-                <TechItem icon={SiYarn} name="Yarn" />
-                <TechItem icon={SiNextJs} name="Next.js" />
-                <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
-                <TechItem icon={SiStyledComponents} name="styled-components" />
-                <TechItem icon={SiPrisma} name="Prisma" />
-                <TechItem icon={SiRedis} name="Redis" />
-                <TechItem icon={SiPostgresql} name="Postgres" />
-                <TechItem icon={SiGit} name="Git" />
+                <TechItem icon={SiTypescript} name="TypeScript" />
                 <TechItem icon={SiPython} name="Python" />
-                <TechItem icon={SiRust} name="Rust" />
+                <TechItem icon={SiNextJs} name="Next.js" />
+                <TechItem icon={SiReact} name="React.js" />
+                <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
+                <TechItem icon={SiMongodb} name="MongoDB" />
                 <TechItem icon={SiDocker} name="Docker" />
-                <TechItem icon={SiSwift} name="Swift" />
+                <TechItem icon={SiNginx} name="Ngninx" />
+                <TechItem icon={SiCloudflare} name="Cloudflare" />
+                <TechItem icon={SiGit} name="Git" />
+                <TechItem icon={SiGnubash} name="Bash" />
+                <TechItem icon={SiRaspberrypi} name="RaspberryPi" />
+                <TechItem icon={SiFigma} name="Figma" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
