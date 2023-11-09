@@ -70,7 +70,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
                 <TechItem icon={SiMongodb} name="MongoDB" />
                 <TechItem icon={SiDocker} name="Docker" />
-                <TechItem icon={SiNginx} name="Ngninx" />
+                <TechItem icon={SiNginx} name="Nginx" />
                 <TechItem icon={SiCloudflare} name="Cloudflare" />
                 <TechItem icon={SiGit} name="Git" />
                 <TechItem icon={SiGnubash} name="Bash" />
