@@ -12,12 +12,17 @@ module.exports = {
         source: '/twitter',
         destination: 'https://twitter.com/TrixzyDev',
         permanent: true,
-      }.
+      },
       {
         source: '/discord',
         destination: 'https://discord.com/users/992171799536218142',
         permanent: true,
-      }.
+      },
+      {
+        source: '/status',
+        destination: 'https://status.tigerlake.xyz',
+        permanent: true,
+      },
     ]
   },
   images: {
