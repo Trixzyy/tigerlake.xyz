@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: Success
-        run: echo "Build successful! Deploying..."
+        run: echo "Build successful! Deploying to server..."
 
       - name: Deploy using SSH
         uses: appleboy/ssh-action@master
