@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14 # Use an LTS version
+          node-version: 18.6 # Use an LTS version
 
       - name: Install dependencies
         run: npm install 
@@ -27,7 +27,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy using ssh
+      - name: Success
+        run: echo "Build successful! Deploying..."
+
+      - name: Deploy using SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
