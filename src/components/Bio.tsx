@@ -49,7 +49,7 @@ const Bio = () => {
                         user.discord_user.id +
                         "/" +
                         user.discord_user.avatar +
-                        "?size=512"
+                        "?size=256"
                     }
                     className="w-[7.5rem] h-[7.5rem] rounded-full mr-4 pointer-events-none"
                     alt="Trixzy's Avatar"
