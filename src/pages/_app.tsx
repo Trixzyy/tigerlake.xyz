@@ -53,6 +53,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 </div>
                 <Spotify />
             </div>
+
+            <script async src="https://a.tigerlake.xyz/script.js" data-website-id="ea8e9404-e6e8-4416-a5e7-f932706f2f96"></script>
         </>
     );
 }

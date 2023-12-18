@@ -75,6 +75,7 @@ const MessageComponent = () => {
                             <p className="text-gray-900 dark:text-gray-300 text-sm">{errMsg}</p>
 
                             <button
+                                data-umami-event="sendMessage"
                                 onClick={sendMessage}
                                 className="border border-gray-800 hover:bg-gray-200 dark:border-indigo-600/80 dark:bg-indigo-600/70 dark:hover:bg-indigo-500/70 flex flex-row items-center justify-center rounded-full px-5 py-2 text-sm font-medium transition-colors duration-75"
                             >

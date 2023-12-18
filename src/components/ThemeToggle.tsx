@@ -28,6 +28,7 @@ const ThemeToggle = () => {
 
     return (
         <button
+            data-umami-event="toggleTheme"
             className="p-2 rounded-md bg-transparent hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer"
             onClick={() => changeTheme(theme)}
         >

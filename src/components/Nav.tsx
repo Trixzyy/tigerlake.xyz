@@ -81,6 +81,7 @@ const Nav = () => {
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
                     <LinkButton
+                        data-umami-event="githubClicked"
                         title="GitHub"
                         href={"https://github.com/Trixzyy"}
                         icon={
@@ -88,6 +89,7 @@ const Nav = () => {
                         }
                     />
                     <LinkButton
+                        data-umami-event="twitterClicked"
                         title="Twitter"
                         href={"https://twitter.com/trixzydev"}
                         icon={
@@ -95,8 +97,9 @@ const Nav = () => {
                         }
                     />
                     <LinkButton
+                        data-umami-event="emailClicked"
                         title="Email"
-                        href={"mailto:hi@tigerlake.xyz"}
+                        href={"mailto:zac@tigerlake.xyz"}
                         icon={
                             <FiMail className="w-6 h-6 cursor-pointer hover:stroke-white stroke-gray-400 transition-colors" />
                         }
@@ -153,15 +156,18 @@ const Nav = () => {
 
                             <div className="flex flex-row items-center justify-center gap-6 py-4">
                                 <LinkButton
+                                    data-umami-event="githubClicked"
                                     href={"https://github.com/Trixzyy"}
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
+                                    data-umami-event="twitterClicked"
                                     href={"https://twitter.com/trixzydev"}
                                     icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"mailto:hi@tigerlake.xyz"}
+                                    data-umami-event="emailClicked"
+                                    href={"mailto:zac@tigerlake.xyz"}
                                     icon={<FiMail className="w-6 h-6 cursor-pointer" />}
                                 />
                             </div>

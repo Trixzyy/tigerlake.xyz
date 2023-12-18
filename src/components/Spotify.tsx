@@ -32,6 +32,7 @@ const Spotify = () => {
                 <div className="w-56 h-full flex flex-col items-start justify-center">
                     <a
                         href={`https://open.spotify.com/track/${user.spotify.track_id}`}
+                        data-umami-event="songClicked"
                         target="_blank"
                         rel="noreferrer"
                         className="w-full font-medium text-gray-900 dark:text-[#e1eafd] hover:underline truncate"

@@ -28,6 +28,7 @@ const ContactLink = ({
         <Link href={link} passHref>
             <animated.a
                 target="_blank"
+                data-umami-event="socialClicked"
                 rel="noreferrer noopener"
                 onMouseMove={({ clientX: x, clientY: y }: { clientX: number; clientY: number }) =>
                     set({ xys: calc(x, y) })
