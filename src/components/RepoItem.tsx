@@ -27,7 +27,7 @@ const RepoItem = ({ name, description, stars, forks, language }: RepoProps) => {
 
     return (
         <a href={`https://github.com/Trixzyy/${name}`} data-umami-event="projectClicked" rel="noreferrer" target="_blank">
-            <div className="flex flex-col h-36 p-4 bg-white/10 dark:bg-black/10 rounded-md border border-slate-400 hover:border-slate-700 dark:border-slate-800 dark:hover:border-slate-600 transition-colors duration-75 cursor-pointer">
+            <div className="flex flex-col h-36 p-4 bg-white/10 dark:bg-black/10 rounded-md border border-red-400 hover:border-red-700 dark:border-red-800 dark:hover:border-red-600 transition-colors duration-75 cursor-pointer">
                 <h1 className="font-semibold mb-1">{name}</h1>
                 <p className="text-sm text-gray-800/70 dark:text-gray-100/70">
                     {truncatedDescription}

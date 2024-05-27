@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </Head>
 
-            <div className="text-black dark:text-white flex flex-row justify-center w-full h-full bg-gradient-to-bl from-white to-[#fff] dark:from-black dark:to-[#0d131f] min-h-screen">
+            <div className="text-black dark:text-white flex flex-row justify-center w-full h-full bg-gradient-to-bl from-white to-[#fff] dark:from-black dark:to-[#240c0b] min-h-screen">
                 <Nav />
                 <div className="w-[80%] md:w-[45rem]">
                     <AnimatePresence exitBeforeEnter>

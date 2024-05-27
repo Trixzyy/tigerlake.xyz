@@ -31,6 +31,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'http.cat',
       },
+      {
+        protocol: 'https',
+        hostname: 's.tigerlake.xyz',
+      },
     ],
   },
 }

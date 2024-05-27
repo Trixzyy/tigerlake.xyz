@@ -17,6 +17,7 @@ import {
     SiFigma,
     SiNginx,
     SiRaspberrypi,
+    SiDiscord,
 } from "react-icons/si";
 
 import { TechItem } from "../components/TechItem";
@@ -59,7 +60,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 I use a variety of tools to streamline my development process and increase the quality of both my code,
                 and my projects. Below is a list of technologies and languages I have experience with. 
             </p>
-            <div className="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10 mb-12">
+            <div className="w-full flex flex-wrap flex-row justify-center p-1 border border-red-800 rounded-md bg-white/10 dark:bg-black/10 mb-12">
                 <TechItem icon={SiVisualstudiocode} name="VSCode - My IDE of choice" />
                 <TechItem icon={SiNodeJs} name="Node.js" />
                 <TechItem icon={SiJavascript} name="JavaScript" />
@@ -69,6 +70,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 <TechItem icon={SiReact} name="React.js" />
                 <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
                 <TechItem icon={SiMongodb} name="MongoDB" />
+                <TechItem icon={SiDiscord} name="Discord.js" />
                 <TechItem icon={SiDocker} name="Docker" />
                 <TechItem icon={SiNginx} name="Nginx" />
                 <TechItem icon={SiCloudflare} name="Cloudflare" />

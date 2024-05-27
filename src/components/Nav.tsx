@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { SiTwitter, SiGithub, SiLinkedin } from "react-icons/si";
+import { SiDiscord, SiGithub } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -72,11 +72,12 @@ const Nav = () => {
 
     return (
         <>
-            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/60 border border-slate-800/50 backdrop-blur-lg">
+            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#240c0b]/60 border border-red-900/50 backdrop-blur-lg">
                 <div className="flex flex-row items-center justify-between gap-2">
                     <ThemeToggle />
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
                     <LandingButton name="Contact" link="/contact" selected={router.pathname === "/contact"} />
+                    <LandingButton name="Guestbook" link="/guestbook" selected={router.pathname === "/guestbook"} />
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
@@ -89,11 +90,11 @@ const Nav = () => {
                         }
                     />
                     <LinkButton
-                        data-umami-event="twitterClicked"
-                        title="Twitter"
-                        href={"https://twitter.com/trixzydev"}
+                        data-umami-event="discordClicked"
+                        title="Discord"
+                        href={"https://discord.com/users/992171799536218142"}
                         icon={
-                            <SiTwitter className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
+                            <SiDiscord className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
                         }
                     />
                     <LinkButton
@@ -161,9 +162,9 @@ const Nav = () => {
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    data-umami-event="twitterClicked"
-                                    href={"https://twitter.com/trixzydev"}
-                                    icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
+                                    data-umami-event="discordClicked"
+                                    href={"https://discord.com/users/992171799536218142"}
+                                    icon={<SiDiscord className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
                                     data-umami-event="emailClicked"

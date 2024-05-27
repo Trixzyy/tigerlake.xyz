@@ -15,12 +15,13 @@ const Bio = () => {
             className="mt-24 w-full mb-12"
         >
             <div className="mt-36 w-full h-[6rem] flex flex-row justify-start">
-                <img
-                    src={""}
-                    className="w-[7.5rem] h-[7.5rem] rounded-full mr-4 pointer-events-none bg-stone-300 dark:bg-stone-700 animate-pulse"
+            <img
+                    src={"/Trixzys-Avatar.webp"}
+                    className="w-[7.5rem] h-[7.5rem] rounded-full mr-4 pointer-events-none"
+                    alt="Trixzy's Avatar"
                 />
                 <div className="w-156 h-full flex flex-col items-start ">
-                    <h1 className="font-bold text-2xl md:text-3xl">Hey, I'm trixzy</h1>
+                    <h1 className="font-bold text-2xl md:text-3xl">Hey, I'm Zac</h1>
                     <div className="flex items-center mt-2">
                         <span className="ml-2 w-2 h-2"></span>
                         <span className="absolute w-2 h-2 rounded-full bg-stone-300 dark:bg-stone-500 animate-ping"/>
@@ -78,18 +79,12 @@ const Bio = () => {
         >
             <div className="mt-36 w-full h-[6rem] flex flex-row justify-start">
                 <img
-                    src={
-                        "https://cdn.discordapp.com/avatars/" +
-                        user.discord_user.id +
-                        "/" +
-                        user.discord_user.avatar +
-                        "?size=256"
-                    }
+                    src={"/Trixzys-Avatar.webp"}
                     className="w-[7.5rem] h-[7.5rem] rounded-full mr-4 pointer-events-none"
                     alt="Trixzy's Avatar"
                 />
                 <div className="w-156 h-full flex flex-col items-start ">
-                    <h1 className="font-bold text-2xl md:text-3xl">Hey, I'm {user.discord_user.username}</h1>
+                    <h1 className="font-bold text-2xl md:text-3xl">Hey, I'm Zac</h1>
                     <div className="flex items-center mt-2">
                         <span className="ml-2 w-2 h-2"></span>
                         <span className={"absolute w-2 h-2 rounded-full" + ` bg-${statusColor}-500`} />

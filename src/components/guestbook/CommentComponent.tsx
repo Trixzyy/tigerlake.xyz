@@ -3,8 +3,9 @@ import { useRef, useState } from "react";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { ImSpinner2 } from "react-icons/im";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
-const MessageComponent = () => {
+const CommentComponent = () => {
     const email = useRef<string>("");
     const message = useRef<string>("");
     const [sending, setSending] = useState<boolean>(false);
@@ -17,12 +18,10 @@ const MessageComponent = () => {
 
     const sendMessage = async () => {
         if (email.current == "" || message.current == "") return setErrMsg("Please fill out all fields!");
-        if (!emailRegex.test(email.current)) return setErrMsg("Pretty sure thats not an email...");
 
         setSending(true);
 
-        let response = await axios.post("/api/send", {
-            email: email.current,
+        let response = await axios.post("/api/sign", {
             message: message.current,
         });
 
@@ -45,7 +44,7 @@ const MessageComponent = () => {
                         transition={{ duration: 0.25, ease: "easeOut" }}
                         className="w-full h-full flex items-center justify-center text-gray-400 text-sm"
                     >
-                        Thanks for reaching out! I'll get back to you soon.
+                        Thanks signing my guestbook! 🎉
                     </motion.p>
                 )}
                 {!messageSent && (
@@ -56,21 +55,23 @@ const MessageComponent = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.25, ease: "easeOut" }}
                     >
-                        <h1 className="font-bold text-sm dark:text-slate-500 mb-1">EMAIL</h1>
-                        <input
-                            placeholder="zac@tigerlake.xyz"
-                            type="text"
-                            onChange={(e: any) => (email.current = e.target.value)}
-                            className="w-full p-2 mb-4 rounded-md bg-slate-300/50 dark:bg-slate-200/5 text-sm placeholder:text-gray-600 dark:placeholder:text-slate-200/20"
+                        <div className="items-start flex flex-row justify-start mr-4">
+                        <Image
+                            src="https://s.tigerlake.xyz/r/idYJnR6YE1.jpeg"
+                            width={64}
+                            height={64}
+                            className="rounded-full object-cover"
+                            alt="Picture of a cat hiding under a magazine, being not found"
                         />
 
+                        <div className="w-[450px] ml-4">
                         <h1 className="font-bold text-sm dark:text-slate-500 mb-1">MESSAGE</h1>
                         <textarea
                             placeholder="Hey Zac, how's it going?"
                             onChange={(e: any) => (message.current = e.target.value)}
                             className="w-full min-h-[9rem] p-2 h-36 mb-4 rounded-md bg-slate-300/50 dark:bg-slate-200/5 text-sm placeholder:text-gray-600 dark:placeholder:text-slate-200/20"
                         />
-
+                        
                         <div className="w-full flex flex-row justify-between items-center">
                             <p className="text-gray-900 dark:text-gray-300 text-sm">{errMsg}</p>
 
@@ -83,7 +84,9 @@ const MessageComponent = () => {
                                 {!sending && <RiSendPlane2Fill className="ml-2" />}
                                 {sending && <ImSpinner2 className="w-4 h-4 ml-2 animate-spin" />}
                             </button>
+                        </div>  
                         </div>
+                    </div>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -91,4 +94,4 @@ const MessageComponent = () => {
     );
 };
 
-export default MessageComponent;
+export default CommentComponent;
