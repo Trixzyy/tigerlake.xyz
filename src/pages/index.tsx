@@ -19,10 +19,12 @@ import {
     SiRaspberrypi,
     SiDiscord,
 } from "react-icons/si";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 import { TechItem } from "../components/TechItem";
 import RepoItem from "../components/RepoItem";
 import Bio from "../components/Bio"
+import Chip from "../components/Chip"
 
 interface AppProps {
     stats: Record<string, number>;
@@ -39,7 +41,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
             className="mt-24 w-full mb-32"
         >
 
-           
+           <Chip label="NEW" actionText="Sign the guestbook!" icon={FaArrowCircleRight} />
            <Bio></Bio>
       
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mt-14 mb-12">

@@ -75,9 +75,9 @@ const Bio = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ ease: "easeOut", duration: 0.15 }}
-            className="mt-24 w-full mb-12"
+            className="mt-6 w-full mb-12"
         >
-            <div className="mt-36 w-full h-[6rem] flex flex-row justify-start">
+            <div className=" w-full h-[6rem] flex flex-row justify-start">
                 <img
                     src={"/Trixzys-Avatar.webp"}
                     className="w-[7.5rem] h-[7.5rem] rounded-full mr-4 pointer-events-none"
